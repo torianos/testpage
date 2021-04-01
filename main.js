@@ -80,7 +80,7 @@ centerMode: true,
         breakpoint: 1024,
         settings: {
           infinite: true,
-          centerMode: true,
+          centerMode: false,
           slidesToShow: 3,
           slidesToScroll: 1,
           
@@ -89,13 +89,15 @@ centerMode: true,
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          centerMode: false,
+          slidesToShow: 1,
           slidesToScroll: 1
         }
       },
       {
         breakpoint: 480,
         settings: {
+          centerMode: false,
           slidesToShow: 1,
           slidesToScroll: 1
         }
@@ -147,4 +149,8 @@ $(function() {
       $(".menuinv").toggleClass("invisible");        
   })
 });
+
+
+
+
 

@@ -287,13 +287,20 @@ color: @gray;
   .oursdesign {
     width: 300px;
   }
+  .headspace {
   .ours {
     margin-right: 150px;
+  }}
+  .facilities {
+    .ours {
+      margin-right: 0px;
+    }}
   }
   .slick-prev, .slick-next {
     display: none !important;
   }
-}
+
+
 
 // Слайд шоу 
 .slidek {
@@ -571,15 +578,71 @@ max-height: 421px;
 color: @white;
 padding: 54px 54px;
 }
+@supwidth: 499px;
+@supheight: 353px;
 .supcont {
   display: grid;
   grid-template-columns: repeat(auto-fit, 210px);
   justify-content: space-between;
-  max-width: 499px;
-  height: 353px;
+  width: 499px;
+  min-width: @supwidth/4;
+  min-height: 353px;
   background: @white;
   margin: 34px 20px;
-}
+}@media screen and (max-width: 991px) {
+  .supcont {
+    width: 499px;
+  height: 353px;}
+  }
+  
+  @media screen and (max-width: 767px) {
+  /* стили для средних планшетов - начало */
+  width: @supwidth/2;
+  height: 100%
+  }
+  
+  @media screen and (max-width: 479px) {
+  /* стили для телефонов - начало */
+  .supcont {
+    width: @supwidth/3;
+  height: 100%}
+  .carto {
+    margin-bottom: 30px;
+  }
+  .whyfr {
+    width: 300px;
+    min-height: 100%;
+    padding: 25px;
+  }
+  .slidev {
+    .photo {
+      min-height: 325px !important;
+    }
+  }
+  .sliden 
+  {.photo {
+    min-height: 350px !important;
+    max-width: 350px !important;  
+  }}
+  .huge {
+    grid-column: span 1 !important;
+    img {
+      display: none;
+    
+    }
+  }
+  .alc {
+    .ours {
+      width: auto;
+      margin-right: 0;
+    }
+    .card {
+      width: 350px;
+    }
+  }
+  }
+  
+
 .frisp, .withdec {
   .lato;
   .font2030;
@@ -638,8 +701,8 @@ li:hover {
 .facimg {
   @width: 729px;
   @height: 453px;
-  min-width: @width/2;
-  min-height: @height/2;
+  min-width: @width/4;
+  min-height: @height/4;
   width:@width;
   height: @height;
   background-image: url("image/Rectangle\ 17.png");
@@ -653,14 +716,31 @@ li:hover {
 .gallery.container {
   overflow: hidden;
 }
+@media (max-width: 900px) {
+  .ml {
+    margin-left: 0px;
+  }
+  .rightnintro {
+   right: auto !important;
+   left: auto !important;
+   position: relative;
+   .ours {
+     width: auto !important;
+   }
+  }
+  .faq {
+    .ours {
+      width: auto  !important;
+    }
+  }
+  }
   .rightnintro {
     position: absolute;
     right:0;
     top: 0;
   .ours {
-    margin-right: 0;
+    margin-right: 0 !important;
     width: 496px;
-
   }}
   .slidev {
 
@@ -776,22 +856,29 @@ li:hover {
         width: 350px;
         margin-top: 256px
       }
+     
       .slick-slide:not(.slick-center) {
         margin-top: 256px;
       }}
   }
     
     .ml {
-      margin-left: -404px;;
+      margin-left: -404px;
     }
+    
+  
 // начало блока whoused
 .whoused { 
   .container {
     width: 1175px;
   }.margintop;
-  .subtitle { width: 633px;
-  margin-top: 24px;}
-  .ours {margin-right: 0;}
+  .subtitle {
+    display: flex; justify-content: center;
+  margin-top: 24px;
+width: auto;}
+  .ours {
+    display: flex; justify-content: center;
+    margin-right: 0;}
 }
 .frame4 {
   display: flex;
@@ -933,6 +1020,9 @@ line-height: 26px;
     margin-bottom: 52px;
     margin-right: 0;
     width: 578px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
 } .shadow {
   -webkit-box-shadow: 2px 0px 24px 5px rgba(233, 233, 233, 1);
@@ -1164,4 +1254,23 @@ li {
   font-size: 20px;
 line-height: 30px;
 opacity: 0.5;
+}
+
+#container {
+    width: 320px;
+    height: 480px;
+    overflow: hidden;
+    border: 5px solid #0099cc;
+    margin:0 auto;
+}
+#swipe_container {
+    width: 1600px;
+    background: #999;
+}
+.item {
+    font-size: 24px;
+    width: 320px; 
+    height: 480px; 
+    float: left;
+    background: #e3e3e3;
 }
