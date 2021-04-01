@@ -582,7 +582,7 @@ padding: 54px 54px;
 @supheight: 353px;
 .supcont {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 210px);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-content: space-between;
   width: 499px;
   min-width: @supwidth/4;
@@ -609,6 +609,9 @@ padding: 54px 54px;
   .carto {
     margin-bottom: 30px;
   }
+  .whyfrispes {
+    margin-top: 50px;
+  }
   .whyfr {
     width: 300px;
     min-height: 100%;
@@ -628,7 +631,6 @@ padding: 54px 54px;
     grid-column: span 1 !important;
     img {
       display: none;
-    
     }
   }
   .alc {
@@ -1140,7 +1142,7 @@ top: 2px;
 
 .cards-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 30px;
  }
  .card {
